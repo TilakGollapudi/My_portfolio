@@ -1,5 +1,5 @@
 import React from "react";
-import CV from "../assets/Tilak_Gollapudi_Resume (5).pdf";
+import CV from "../assets/Tilak_Gollapudi_Resume.pdf";
 
 const GithubIcon = () => (
   <svg
