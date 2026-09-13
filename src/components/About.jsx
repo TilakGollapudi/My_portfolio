@@ -32,37 +32,46 @@ const About = ({ darkMode }) => {
   return (
     <section
       id="about"
-      className={`h-screen flex items-center justify-center px-4 sm:px-6
-      pt-20 pb-5 overflow-hidden ${
-        darkMode
-          ? "bg-gray-900 text-white"
-          : "bg-gray-50 text-gray-900"
-      }`}
+      className={`w-full min-h-screen flex items-center justify-center
+        px-4 sm:px-6 lg:px-8
+        pt-24 sm:pt-28 lg:pt-24
+        pb-12 sm:pb-14 lg:pb-16
+        ${
+          darkMode
+            ? "bg-gray-900 text-white"
+            : "bg-gray-50 text-gray-900"
+        }`}
     >
       <div
         className="
-          w-full max-w-7xl
-          h-full
-          max-h-[780px]
-          grid grid-cols-1 lg:grid-cols-2
-          gap-6 lg:gap-8
+          w-full
+          max-w-7xl
+          grid
+          grid-cols-1
+          lg:grid-cols-2
+          gap-8
+          lg:gap-12
           items-center
         "
       >
         {/* ================= LEFT SIDE ================= */}
         <div
           data-aos="fade-right"
-          className="flex flex-col justify-center min-h-0"
+          className="w-full flex flex-col justify-center"
         >
           {/* TITLE */}
           <h1
             data-aos="fade-up"
             className="
-              text-4xl sm:text-5xl lg:text-6xl
+              text-4xl
+              sm:text-5xl
+              lg:text-6xl
               font-bold
-              mb-3
+              mb-4
               text-transparent
-              bg-gradient-to-r from-orange-400 to-orange-600
+              bg-gradient-to-r
+              from-orange-400
+              to-orange-600
               bg-clip-text
             "
           >
@@ -75,7 +84,7 @@ const About = ({ darkMode }) => {
               darkMode ? "text-gray-300" : "text-gray-600"
             }`}
           >
-            <p className="mb-3">
+            <p className="mb-4">
               I'm a Java Full Stack Developer with hands-on experience in
               Java, Servlets, JSP, JDBC, MySQL and Apache Tomcat, and I'm
               currently strengthening my skills in Spring Boot, REST APIs
@@ -93,13 +102,22 @@ const About = ({ darkMode }) => {
           </div>
 
           {/* ================= HIGHLIGHTS ================= */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-5">
+          <div
+            className="
+              grid
+              grid-cols-2
+              lg:grid-cols-4
+              gap-3
+              mt-6
+            "
+          >
             {highlights.map((item, index) => (
               <div
                 key={index}
                 className={`
+                  w-full
                   rounded-xl
-                  p-3
+                  p-3 sm:p-4
                   min-h-[105px]
                   border
                   transition-all
@@ -113,12 +131,21 @@ const About = ({ darkMode }) => {
                   }
                 `}
               >
-                <h3 className="text-orange-500 font-bold text-base lg:text-lg mb-1">
+                <h3
+                  className="
+                    text-orange-500
+                    font-bold
+                    text-base
+                    lg:text-lg
+                    mb-1
+                    break-words
+                  "
+                >
                   {item.title}
                 </h3>
 
                 <p
-                  className={`text-xs sm:text-sm ${
+                  className={`text-xs sm:text-sm leading-5 ${
                     darkMode ? "text-gray-400" : "text-gray-500"
                   }`}
                 >
@@ -129,7 +156,7 @@ const About = ({ darkMode }) => {
           </div>
 
           {/* ================= CORE JAVA ================= */}
-          <div className="mt-5">
+          <div className="mt-6">
             <h2
               className={`
                 text-xs
@@ -152,9 +179,11 @@ const About = ({ darkMode }) => {
                 <span
                   key={index}
                   className={`
-                    px-3 py-1.5
+                    px-3
+                    py-1.5
                     rounded-full
-                    text-xs sm:text-sm
+                    text-xs
+                    sm:text-sm
                     border
                     transition-all
                     duration-300
@@ -177,14 +206,17 @@ const About = ({ darkMode }) => {
         {/* ================= RIGHT SIDE ================= */}
         <div
           data-aos="fade-left"
-          className="flex items-center min-h-0 h-full"
+          className="w-full flex items-center"
         >
           <div
             className={`
               relative
               w-full
-              rounded-3xl
-              p-6 sm:p-7
+              rounded-2xl
+              sm:rounded-3xl
+              p-5
+              sm:p-7
+              lg:p-8
               border
               overflow-hidden
               ${
@@ -205,18 +237,22 @@ const About = ({ darkMode }) => {
                 rounded-full
                 bg-orange-500/10
                 blur-3xl
+                pointer-events-none
               "
             />
 
             <div className="relative z-10">
-
-              {/* EDUCATION HEADER */}
+              {/* ================= EDUCATION HEADER ================= */}
               <div className="flex items-center gap-3 mb-5">
                 <div
                   className={`
-                    w-12 h-12
+                    w-12
+                    h-12
+                    shrink-0
                     rounded-xl
-                    flex items-center justify-center
+                    flex
+                    items-center
+                    justify-center
                     ${
                       darkMode
                         ? "bg-orange-500/10"
@@ -236,6 +272,7 @@ const About = ({ darkMode }) => {
                       strokeWidth="1.8"
                       d="M12 14l9-5-9-5-9 5 9 5z"
                     />
+
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -256,12 +293,21 @@ const About = ({ darkMode }) => {
                 </div>
               </div>
 
-              {/* DEGREE */}
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold leading-tight mb-6">
+              {/* ================= DEGREE ================= */}
+              <h2
+                className="
+                  text-xl
+                  sm:text-2xl
+                  lg:text-3xl
+                  font-bold
+                  leading-tight
+                  mb-6
+                "
+              >
                 B.Tech – Computer Science and Engineering
               </h2>
 
-              {/* COLLEGE */}
+              {/* ================= COLLEGE ================= */}
               <div className="flex gap-3 mb-4">
                 <svg
                   className="w-5 h-5 text-orange-500 mt-1 shrink-0"
@@ -277,8 +323,16 @@ const About = ({ darkMode }) => {
                   />
                 </svg>
 
-                <div>
-                  <h3 className="font-semibold text-base sm:text-lg leading-snug">
+                <div className="min-w-0">
+                  <h3
+                    className="
+                      font-semibold
+                      text-base
+                      sm:text-lg
+                      leading-snug
+                      break-words
+                    "
+                  >
                     Vignan Institute of Technology and Sciences
                   </h3>
 
@@ -294,7 +348,7 @@ const About = ({ darkMode }) => {
                 </div>
               </div>
 
-              {/* LOCATION */}
+              {/* ================= LOCATION ================= */}
               <div className="flex gap-3 mb-6">
                 <svg
                   className="w-5 h-5 text-orange-500 mt-1 shrink-0"
@@ -328,11 +382,12 @@ const About = ({ darkMode }) => {
                 </p>
               </div>
 
-              {/* CGPA */}
+              {/* ================= CGPA ================= */}
               <div
                 className={`
                   rounded-xl
-                  p-5
+                  p-4
+                  sm:p-5
                   border
                   ${
                     darkMode
@@ -353,11 +408,12 @@ const About = ({ darkMode }) => {
                 </p>
               </div>
 
-              {/* EXTRA INFO */}
+              {/* ================= EXTRA INFO ================= */}
               <div className="mt-5">
                 <p
                   className={`
-                    text-sm sm:text-base
+                    text-sm
+                    sm:text-base
                     leading-6
                     ${
                       darkMode
@@ -371,7 +427,6 @@ const About = ({ darkMode }) => {
                   modern backend technologies.
                 </p>
               </div>
-
             </div>
           </div>
         </div>
